@@ -13,7 +13,16 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
   </head>
+  <header>
+    <img class="logoU" src="{% static 'img/logo-ulagos.png' %}" alt="Logo Universidad de Los Lagos">
+  </header>
+
   <body>
-    Página de inicio para web de Horarios ULA
+    <div class="container">
+      {% block content %}
+      Página de inicio para web de Horarios ULA
+      {% endblock %}
+    </div>
   </body>
+
 </html>
