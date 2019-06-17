@@ -3,16 +3,33 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
 }
 body {
-  background-color: rgb(74, 134, 232) !important;
+
 }
 
 /* Header */
-img.logoU {
-  width: 250px;
+header {
+  height: 100px;
+  background-color: #0055B7;
+}
+div.logoU {
+  padding: auto 0;
+  width: 200px;
   height: auto;
 }
 
 /* Contenedor principal */
 div.container {
   background-color: #FFFFFF;
+}
+div.login {
+  width: 300px;
+  height: 350px;
+  box-shadow: -1px 0px 6px -1px;
+  border: solid 1px #d6d7d8;
+  border-radius: 15px;
+  background-color: #E4E6E8;
+}
+button.btn-login {
+  color: #ffffff;
+  background-color: #0055B7;
 }
