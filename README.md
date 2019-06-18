@@ -7,3 +7,6 @@ Aplicación de horarios de la Universidad de Los Lagos
 Modelo que podria servir de guia para el calendario:
 - [Calendario 1](https://alexpnt.github.io/2017/07/15/django-calendar/)
 - [Calendario 2](https://www.huiwenteo.com/normal/2018/07/24/django-calendar.html)
+
+Login con email:
+- [Login 1](https://apuntes-snicoper.readthedocs.io/es/latest/programacion/python/django/login_username_or_email.html)
