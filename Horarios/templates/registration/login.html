@@ -20,9 +20,21 @@
   </header>
 
   <body>
-    {% block content %}
-    Parrafo de relleno
-    {% endblock %}
+    <div class="container mt-4 pt-4 px-4 login">
+      <p>Sistema de Horarios Ulagos</p>
+      <form action="/action_page.php">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="email">Correo electronico:</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Contraseña:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <button type="submit" class="btn btn-default btn-login mt-3">Iniciar Sesión</button>
+      </form>
+    </div>
   </body>
 
 </html>
