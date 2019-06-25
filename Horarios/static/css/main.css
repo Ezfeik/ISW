@@ -9,7 +9,7 @@ body {
 /* Header */
 header {
   height: 100px;
-  background-color: #0055B7;
+  background-color: #005AB6;
 }
 div.logoU {
   padding: auto 0;
@@ -24,7 +24,7 @@ div.container {
 div.login {
   width: 300px;
   height: 350px;
-  box-shadow: -1px 0px 6px -1px;
+  box-shadow: -1px 0px 7px -3px;
   border: solid 1px #d6d7d8;
   border-radius: 15px;
   background-color: #E4E6E8;
@@ -32,4 +32,26 @@ div.login {
 button.btn-login {
   color: #ffffff;
   background-color: #0055B7;
+}
+div.menu {
+  width: 300px;
+  height: 350px;
+  box-shadow: -1px 0px 7px -3px;
+  border: solid 1px #d6d7d8;
+  border-radius: 15px;
+  background-color: #E4E6E8;
+}
+div.horario {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 90%;
+}
+div.horario td {
+  padding: 10px;
+  border-color: #005AB6;
+}
+div.comentarios {
+  text-align: left;
 }
