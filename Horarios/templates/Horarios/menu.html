@@ -1,0 +1,19 @@
+{% extends 'Horarios/index.html' %}
+{% block content %}
+  <div class="container mt-4 pt-4 px-4 menu">
+    <p>Sistema de Horarios Ulagos</p>
+    {% if user.is_authenticated %}
+    <p>Opciones</p>
+      <ul>
+        {% if user.is_superuser %}
+          <li><a href="/admin/">Pagina de admin</a></li>
+          <li><a href="pdf/">Generar PDF</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+        {% else %}
+          <li><a href="profesor/{{ user.id }}">Registrar/editar disponibilidad</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}
