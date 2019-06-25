@@ -1,13 +1,42 @@
 {% extends 'Horarios/index.html' %}
 {% block content %}
-  <div class="horario">
-    <table>
-    
-    </table>
-  </div>
-  <div class="comentarios">
-    <form class="" action="index.html" method="post">
-
+  <div class="horario my-2">
+    <form method="post">
+    {% csrf_token %}
+      <table class="table table-bordered">
+        <tr>
+          <td>Horario</td>
+          <td>Lunes</td>
+          <td>Martes</td>
+          <td>Miercoles</td>
+          <td>Jueves</td>
+          <td>Viernes</td>
+          <td>Sabado</td>
+        </tr>
+        {% for block in bloqueList %}
+          <tr>
+            <td>{{ block.h_inicio }} - {{ block.h_fin }}</td>
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Lu">
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Ma"></td>
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Mi"></td>
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Ju"></td>
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Vi"></td>
+            <td><input type="checkbox" name="bloque" value="{{ block.nombre }}Sa"></td>
+          </tr>
+        {% empty %}
+        <p>WHAT?</p>
+        {% endfor %}
+      </table>
+      <div class="comentarios pl-3">
+        <h5>Comentarios</h5>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-default btn-login mt-3">Enviar</button>
     </form>
   </div>
 {% endblock %}
