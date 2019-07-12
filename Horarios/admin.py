@@ -10,7 +10,7 @@ class BloqueAdmin(admin.ModelAdmin):
     list_display = ('nombre','h_inicio','h_fin')
 
 class ProfeAdmin(admin.ModelAdmin):
-    list_display = ('usuario','nombres','apellidos','dias_disp')
+    list_display = ('usuario','nombres','apellidos','dias_disp','comentarios')
 
 
 admin.site.register(Profesor, ProfeAdmin)

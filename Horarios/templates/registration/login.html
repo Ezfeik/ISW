@@ -15,7 +15,7 @@
   </head>
   <header class="container-fluid pt-3">
     <div class="logoU">
-      <img src="{% static 'img/logo-ulagos.png' %}" alt="Logo Universidad de Los Lagos">
+      <a href="/menu"><img src="{% static 'img/logo-ulagos.png' %}" alt="Logo Universidad de Los Lagos"></a>
     </div>
   </header>
 
@@ -28,7 +28,10 @@
       {% else %}
         <form method="post">
           {% csrf_token %}
-          {{ form.as_p }}
+          <p><b>Correo:</b></p>
+          {{ form.username }}
+          <p><b>Contraseña:</b></p>
+          {{ form.password }}
           <button type="submit" class="btn btn-default btn-login mt-3">Iniciar Sesión</button>
         </form>
       {% endif %}

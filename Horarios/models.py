@@ -20,5 +20,6 @@ class Profesor(models.Model):
     nombres = models.CharField(max_length=100)
     apellidos = models.CharField(max_length=100)
     dias_disp = models.CharField(max_length=1000, blank=True)
+    comentarios = models.CharField(max_length=1000, default='Sin comentarios')
     def __str__(self):
         return self.nombres

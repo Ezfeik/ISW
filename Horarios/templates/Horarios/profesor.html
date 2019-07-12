@@ -29,14 +29,21 @@
       </table>
       <div class="comentarios pl-3">
         <h5>Comentarios</h5>
-        <select>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
+        <select class="custom-select" name="opcion" onchange="opciones(this.value)">
+          <option value="Direccion de Departamento">Dirección de Departamento</option>
+          <option value="Cargo Directivo Campus">Cargo Directivo Campus</option>
+          <option value="Jefatura de Carrera">Jefatura de Carrera</option>
+          <option value="Dirección de Proyecto de Investigación">Dirección de Proyecto de Investigación</option>
+          <option value="Dirección Central">Dirección Central</option>
+          <option value="Dirección de Proyecto de Gestión Institucional">Dirección de Proyecto de Gestión Institucional</option>
+          <option value="otro">Otro (especificar)</option>
         </select>
+        <div class="mt-2 caja-comentarios">
+          <input class="form-control" type="text" name="otro" id="otro" style='display:none;'/>
+        </div>
       </div>
-      <button type="submit" class="btn btn-default btn-login mt-3">Enviar</button>
+      <button type="submit" class="btn btn-default btn-login m-3 float-right">Enviar</button>
+      <button class="btn btn-default btn-login m-3 float-right"><a href="/menu">Volver</a></button>
     </form>
   </div>
 {% endblock %}

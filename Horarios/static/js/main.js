@@ -1,4 +1,7 @@
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
-  event.preventDefault();
-  $(this).ekkoLightbox();
-});
+function opciones(val){
+ var element=document.getElementById('otro');
+ if(val=='otro')
+   element.style.display='block';
+ else
+   element.style.display='none';
+}
