@@ -26,8 +26,7 @@ div.login {
   height: 350px;
   box-shadow: -1px 0px 7px -3px;
   border: solid 1px #d6d7d8;
-  border-radius: 15px;
-  background-color: #E4E6E8;
+  background-color: #f2f2f2;
 }
 button.btn-login {
   color: #ffffff;
@@ -41,8 +40,7 @@ div.menu {
   height: 350px;
   box-shadow: -1px 0px 7px -3px;
   border: solid 1px #d6d7d8;
-  border-radius: 15px;
-  background-color: #E4E6E8;
+  background-color: #f2f2f2;
 }
 div.horario {
   width: 50%;

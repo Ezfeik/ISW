@@ -1,0 +1,21 @@
+{% extends 'registration/login.html' %}
+{% block content %}
+  <div class="container mt-4 pt-4 px-4 menu">
+    <p>Sistema TechLab</p>
+    {% if user.is_authenticated %}
+    <p>Hola {{ username }} tipo {{ tipo }}</p>
+    <p>Opciones</p>
+      {% ifequal tipo 1 %}
+      <ul>
+          <li><a href="pacientes/">Buscar/Registrar Paciente</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+      </ul>
+      {% else %}
+      <ul>
+          <li><a href="ordenes/">Lista de ordenes medicas</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+      </ul>
+      {% endifequal %}
+    {% endif %}
+  </div>
+{% endblock %}

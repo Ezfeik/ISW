@@ -1,0 +1,19 @@
+{% extends 'registration/login.html' %}
+{% block content %}
+  <div class="container my-2 w-50">
+    <p>Rut: {{ p.rut }}</p>
+    <p>Nombre: {{ p.nombre }}</p>
+    <form method="post">
+    {% csrf_token %}
+    {% for field in upload_form %}
+    <div class="form-group">
+      {{field.label}}
+      {{ field }}
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">
+      Generar Orden
+    </button>
+    </form>
+  </div>
+{% endblock %}

@@ -21,17 +21,24 @@
 
   <body>
     {% block content %}
+    <div class="container mt-4 pt-4 px-4 login">
+      <p>Sistema TechLab</p>
       {% if user.is_authenticated %}
-        Hi {{ user.username }}!
-        <p><a href="{% url 'logout' %}">logout</a></p>
+        <p>Ya estas logeado</p>
+        <a href="/menu">Volver</a>
       {% else %}
-        <p>You are not logged in</p>
-        <a href="{% url 'login' %}">login</a>
+        <form method="post">
+          {% csrf_token %}
+          <p><b>Correo:</b></p>
+          {{ form.username }}
+          <p><b>Contraseña:</b></p>
+          {{ form.password }}
+          <button type="submit" class="btn btn-default btn-login mt-3">Iniciar Sesión</button>
+        </form>
       {% endif %}
-    {% endblock %}
 
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    </div>
+    {% endblock %}
   </body>
 
 </html>
